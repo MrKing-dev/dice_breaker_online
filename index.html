@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<title>dice_site</title>
+</head>
+
+<body>
+<script src="./script.js"></script>
+<div class="resp-table">
+  <div class="resp-table-header">
+     <div class="table-header-cell">
+      <h2 class="header">&nbsp;Dice Options</h2>
+    </div>
+    <div class="table-header-cell">
+      <h2 class="header">&nbsp;</h2>
+    </div>
+  </div>
+  <form name="diceForm" action="" method="GET">
+    <div class="resp-table-body">
+      <div class="resp-table-row">
+        <div class="table-body-cell">
+          <h3>&nbsp;How Many Sides?</h3>
+        </div>
+      <div class="table-body-cell">
+        <label for="sides"></label>
+          <select id="sides" name="sides">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="20">20</option>
+          </select>
+      </div>
+    </div>
+    <div class="resp-table-row">
+      <div class="table-body-cell">
+        <h3>&nbsp;How Many Dice?</h3>
+      </div>
+      <div class="table-body-cell">
+        <label for="quan"></label>
+        <input type="number" name="quan" id="quan">
+      </div>
+    </div>
+    <div class="resp-table-row">
+      <div class="table-body-cell">
+        <h3>&nbsp;Highlight Successes (8-10 for D10, 20 for D10)?</h3>
+      </div>
+      <div class="table-body-cell">
+        <label for="successes"></label>
+        <input type="checkbox" name="successes" id="successes">      
+      </div>
+    </div>
+    <div class="resp-table-row">
+      <div class="table-body-cell">
+        <h3>&nbsp;Explode Dice (re-roll max rolls)?</h3>
+      </div>
+      <div class="table-body-cell">
+        <label for="explode"></label>
+        <input type="checkbox" name="explode" id="explode">        
+      </div>
+    </div>
+    <div class="resp-table-row">
+      <div class="table-body-cell">
+        <h3>&nbsp;Combine all rolls into one result?</h3>
+      </div>
+      <div class="table-body-cell">
+        <label for="combine"></label>
+        <input type="checkbox" name="combine" id="combine">        
+      </div>
+    </div>
+    </div>
+    <div class="resp-table-footer">
+      <div class="table-footer-cell">
+          <textarea id="diceResult" name="diceResult" class="diceResult" rows="4" cols="50">
+  Results
+  </textarea>
+      </div>
+      <div class="table-footer-cell">
+          <input class="button" type="button" name="submit" id="button" value="Submit" onclick="runDice(this.form)"><br>
+          <input class="button" type="button" name="refresh" id="refresh" value="Refresh" onclick="window.location.href=window.location.href">
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
