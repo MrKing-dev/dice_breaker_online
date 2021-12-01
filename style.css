@@ -3,16 +3,7 @@ body {
     color: white;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
-  }
-    
-  h1 {
-  font-size: 16;
-  }
-  h2 {
-  font-size: 18;
-  }
-  h3 {
-  font-size: 24;
+    font-weight: 100;
   }
   
   input[type=number]{
@@ -31,6 +22,9 @@ body {
   }
 
   .resp-table{
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
     width: 50%;
     display: table;
   }
@@ -45,7 +39,7 @@ body {
   .resp-table-header{
     display: table-header-group;
     background-color: cornflowerblue;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 25px;
     color: white;
   }
@@ -54,7 +48,7 @@ body {
     display: table-cell;
     padding: 10px;
     text-align: center;
-    border-bottom: 2px solid royalblue;
+    border-bottom: 3px solid royalblue;
   }
 
   .resp-table-body{
@@ -68,7 +62,7 @@ body {
 
   .table-body-cell{
     display: table-cell;
-    border-bottom: 2px solid royalblue;
+    border-bottom: 3px solid royalblue;
   }
 
   .resp-table-footer{
@@ -82,9 +76,10 @@ body {
 
   .table-footer-cell{
     display: table-cell;
+
     padding: 5px;
     text-align: center;
-    border-bottom: 2px solid royalblue;
+    border-bottom: 3px solid royalblue;
   }
   
   .button{
