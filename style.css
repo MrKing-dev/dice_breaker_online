@@ -32,15 +32,16 @@ body {
   .resp-table-caption{
     display: table-caption;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+      color: white;
   }
 
   .resp-table-header{
     display: table-header-group;
     background-color: dimgrey;
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: 400;
+    font-size: 24px;
     color: white;
   }
 
