@@ -10,87 +10,58 @@
 <title>dice_site</title>
 </head>
 
-<body>
+<body class="flex">
 <script src="./script.js"></script>
-<div class="resp-table">
-  <div class="resp-table-caption">
-    <p class="caption">Dice Breaker</p>
-  </div>
-  <div class="resp-table-header">
-     <div class="table-header-cell">
-       <p>Choices</p>
-    </div>
-    <div class="table-header-cell">
-      <p>Select</p>
-    </div>
-  </div>
-  <form name="diceForm" action="" method="GET">
-    <div class="resp-table-body">
-      <div class="resp-table-row">
-        <div class="table-body-cell">
-          <p>&nbsp;How Many Sides?</p>
-        </div>
-      <div class="table-body-cell">
-        <label for="sides"></label>
-          <select id="sides" name="sides">
-            <option value="4">4</option>
-            <option value="6">6</option>
-            <option value="8">8</option>
-            <option value="10">10</option>
-            <option value="12">12</option>
-            <option value="20">20</option>
-          </select>
+<div class="main">
+      <div class="title">
+        <h1 class="caption">Dice Breaker</h1>
       </div>
-    </div>
-    <div class="resp-table-row">
-      <div class="table-body-cell">
-        <p>&nbsp;How Many Dice?</p>
+      <form name="diceForm" action="" method="GET">
+        <div class="content">
+          <div class="row">
+              <label for="sides">How Many Sides?&nbsp&nbsp</label>
+              <select id="sides" name="sides">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+          <div class="row">
+              <label for="quan">How Many Dice?&nbsp&nbsp</label>
+              <input type="number" name="quan" id="quan">
+          </div>
+          <div class="row">
+            <label for="successes">Highlight Successes (for D10 and D20)?&nbsp&nbsp</label>
+            <input type="checkbox" name="successes" id="successes">      
+          </div>
+          <div class="row">
+          <label for="explode">Explode Dice (re-roll max rolls)?&nbsp&nbsp</label>
+          <input type="checkbox" name="explode" id="explode">       
+          </div>
+          <div class="row">
+            <label for="combine">Combine all rolls into one result?&nbsp&nbsp</label>
+            <input type="checkbox" name="combine" id="combine">        
+          </div>
       </div>
-      <div class="table-body-cell">
-        <label for="quan"></label>
-        <input type="number" name="quan" id="quan">
-      </div>
-    </div>
-    <div class="resp-table-row">
-      <div class="table-body-cell">
-        <p>&nbsp;Highlight Successes (8-10 for D10, 20 for D10)?</p>
-      </div>
-      <div class="table-body-cell">
-        <label for="successes"></label>
-        <input type="checkbox" name="successes" id="successes">      
-      </div>
-    </div>
-    <div class="resp-table-row">
-      <div class="table-body-cell">
-        <p>&nbsp;Explode Dice (re-roll max rolls)?</p>
-      </div>
-      <div class="table-body-cell">
-        <label for="explode"></label>
-        <input type="checkbox" name="explode" id="explode">        
-      </div>
-    </div>
-    <div class="resp-table-row">
-      <div class="table-body-cell">
-        <p>&nbsp;Combine all rolls into one result?</p>
-      </div>
-      <div class="table-body-cell">
-        <label for="combine"></label>
-        <input type="checkbox" name="combine" id="combine">        
-      </div>
-    </div>
-    </div>
-    <div class="resp-table-footer">
-      <div class="table-footer-cell">
-          <textarea id="diceResult" name="diceResult" class="diceResult" rows="4" cols="50">
-  Results
-  </textarea>
-      </div>
-      <div class="table-footer-cell">
-          <input class="button" type="button" name="submit" id="button" value="Submit" onclick="runDice(this.form)"><br>
-          <input class="button" type="button" name="refresh" id="refresh" value="Refresh" onclick="window.location.href=window.location.href">
-      </div>
-    </div>
-  </form>
+          <div class="footer">
+            <span>
+                <div id="diceResult" class="diceResult">
+                    Results<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+              </span>
+            <span class="footer-cell">
+                <input class="button" type="button" name="submit" id="button" value="Submit" onclick="runDice(this.form)"><br>
+                <input class="button" type="button" name="refresh" id="refresh" value="Refresh" onclick="window.location.href=window.location.href">
+            </span>
+          </div>
+    </form>
 </div>
 
 </body>
